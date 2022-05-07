@@ -1,13 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
+
 <head>
-	<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Catalog</title>
-    <link rel="stylesheet" href="fontawesome/css/all.min.css"> <!-- https://fontawesome.com/ -->
+    <title>TrendNow</title>
+    <link rel="stylesheet" href="fontawesome/css/all.min.css"> 
+    <!-- https://fontawesome.com/ -->
+
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <!-- https://fonts.google.com/ -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
     <link rel="stylesheet" href="css/templatemo-video-catalog.css">
 <!--
 
@@ -17,20 +23,20 @@ https://templatemo.com/tm-552-video-catalog
 
 -->
 </head>
+
 <body>
-	<div class="tm-page-wrap mx-auto">
-		<div class="position-relative">
-			<div class="potition-absolute tm-site-header">
-				<div class="container-fluid position-relative">
-					<div class="row">						
+    <div class="tm-page-wrap mx-auto">
+        <div class="position-relative">
+            <div class="position-absolute tm-site-header">
+                <div class="container-fluid position-relative">
+                    <div class="row">
                         <div class="col-7 col-md-4">
-                            <a href="index.html" class="tm-bg-black text-center tm-logo-container">
-                                <i class="fas fa-video tm-site-logo mb-3"></i>
-                                <h1 class="tm-site-name">Video Catalog</h1>
-                            </a>
+                            <img src="img/logo.png" class="tm-logo-container">
                         </div>
                         <div class="col-5 col-md-8 ml-auto mr-0">
                             <div class="tm-site-nav">
+
+                                <!-- INIZIO HAMBURGER PER TELEFONO-->
                                 <nav class="navbar navbar-expand-lg mr-0 ml-auto" id="tm-main-nav">
                                     <button class="navbar-toggler tm-bg-black py-2 px-3 mr-0 ml-auto collapsed" type="button"
                                         data-toggle="collapse" data-target="#navbar-nav" aria-controls="navbar-nav"
@@ -40,34 +46,57 @@ https://templatemo.com/tm-552-video-catalog
                                             <i class="fas fa-times tm-menu-opened-icon"></i>
                                         </span>
                                     </button>
-                                    <div class="collapse navbar-collapse tm-nav" id="navbar-nav">
-                                        <ul class="navbar-nav text-uppercase">
+                                <!-- FINE HAMBURGER PER TELEFONO-->
+
+                                        <!-- INIZIO MENU A TENDINA e HOME-->
+                                      <div class="collapse navbar-collapse tm-nav" id="navbar-nav" id="navbarNavDropdown">
+                                          <ul class="navbar-nav text-uppercase">
                                             <li class="nav-item">
-                                                <a class="nav-link tm-nav-link" href="index.html">Videos</a>
+                                            <a class="nav-link tm-nav-link" href="index.html">Home</a>
                                             </li>
+                                            <li class="nav-item dropdown nav-item">
+                                            <a class="nav-link tm-nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                              Categorie <span class="sr-only">current</span>
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                              <a class="dropdown-item" href="#">Viral Now</a>
+                                              <a class="dropdown-item" href="#">Riscoperte dal passato</a>
+                                              <a class="dropdown-item" href="#">Mix and Mashup</a>
+                                              <a class="dropdown-item" href="#">Iconic Meme</a>
+                                            </div>
+                                         <!-- FINE MENU A TENDINA-->
+
                                             <li class="nav-item active">
-                                                <a class="nav-link tm-nav-link" href="about.html">About <span class="sr-only">(current)</span></a>
+                                                <a class="nav-link tm-nav-link" href="about.html">About</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link tm-nav-link" href="contact.html">Contact</a>
-                                            </li>
                                         </ul>
                                     </div>
                                 </nav>
                             </div>
                         </div>
-					</div>
-				</div>
-			</div>
-			<div class="tm-welcome-container tm-fixed-header tm-fixed-header-2">
-				<div class="text-center">
-					<p class="pt-5 px-3 tm-welcome-text tm-welcome-text-2 mb-1 mt-lg-0 mt-5 text-white mx-auto">Another Image BG<br>it can be fixed.<br>Content will simply slide over.</p>                	
-				</div>                
+                    </div>
+                </div>
+            </div>
+            <div class="tm-welcome-container text-center text-white">
+                <div class="tm-welcome-container-inner">
+                    <p class="tm-welcome-text mb-4 text-white">Dai un'occhiata al progetto</p>
+                    <!-- <p class="tm-welcome-text mb-5 text-white">This is a full-width video banner.</p> -->
+                    <a href="#content" class="btn tm-btn-animate tm-btn-cta tm-icon-down">
+                        <span>Scopri</span>
+                    </a>
+                </div>
             </div>
 
-            <div id="tm-fixed-header-bg"></div> <!-- Header image -->
-		</div>
-
+            <div id="tm-video-container">
+                <video autoplay muted loop id="tm-video">
+                    <!-- <source src="video/sunset-timelapse-video.mp4" type="video/mp4"> -->
+                        <source src="video/videosfondo.mp4" type="video/mp4">
+                </video>    
+            </div>
+            
+            <i id="tm-video-control-button" class="fas fa-pause"></i>
+        </div>
 		<!-- Page content -->
 		<main>
 			<div class="container-fluid px-0">
@@ -75,7 +104,7 @@ https://templatemo.com/tm-552-video-catalog
 					<div class="row mt-3 mb-5 pb-3">
 						<div class="col-12">
 							<div class="mx-auto tm-about-text-container px-3">
-								<h2 class="tm-page-title mb-4 tm-text-primary">About the Video Catalog</h2>
+								<h2 class="tm-page-title mb-4 tm-text-primary">About TrendNow</h2>
 								<p class="mb-4">Video Catalog is free HTML CSS template for your website. This Bootstrap v4.4.1 website template is 100% free download for everyone. You can modify and expand this template for your CMS websites. You can use it for commercial or non-commercial work. If you wish to support <a href="https://templatemo.com" class="tm-text-primary">TemplateMo</a>, please contact us.</p>
 								<p class="mb-4">You are <u>not allowed</u> to re-distribute the template ZIP file on any template collection website.</p>
 								<p class="mb-4">Vivamus sit amet justo sed erat iaculis consequat. Nulla suscipit posuere lectus ut venenatis. Proin sed orci eget tellus euismod vulputate eu eu arcu. Etiam a bibendum lorem. Curabitur ac bibendum odio. Vivamus euismod dui mauris, ut tincidunt mi congue quis.</p>
@@ -85,7 +114,7 @@ https://templatemo.com/tm-552-video-catalog
 					</div>					
 				</div>
 
-				<div class="parallax-window" data-parallax="scroll" data-image-src="img/about-2.jpg"></div>
+				<!-- <div class="parallax-window" data-parallax="scroll" data-image-src="img/about-2.jpg"></div>
 
 				<div class="mx-auto tm-content-container mt-4 px-3">
 					<div class="row tm-catalog-item-list mb-4">
@@ -138,20 +167,19 @@ https://templatemo.com/tm-552-video-catalog
 			</div>
 		</main>
 
-		<div class="container-fluid tm-content-container mx-auto pt-5">
+		<div class="container-fluid tm-content-container mx-auto pt-5"> -->
 			<!-- Subscribe form and footer links -->
-            <div class="row mt-5 pt-3">
-                <div class="col-xl-6 col-lg-12 mb-4">
-                    <div class="tm-bg-gray p-5 h-100">
-                        <h3 class="tm-text-primary mb-3">Do you want to get our latest updates?</h3>
-                        <p class="mb-5">Please subscribe our newsletter for upcoming new videos and latest information about our
-                            work. Thank you.</p>
-                        <form action="" method="GET" class="tm-subscribe-form">
-                            <input type="text" name="email" placeholder="Your Email..." required>
-                            <button type="submit" class="btn rounded-0 btn-primary tm-btn-small">Subscribe</button>
-                        </form>
-                    </div>
-                </div>
+                <div class="row mt-5 pt-3">
+                    <div class="col-xl-6 col-lg-12 mb-4">
+                        <div class="tm-bg-gray p-5 h-100">
+                            <h3 class="tm-text-primary mb-3">Vuoi scoprire tutti i nuovi trend?</h3>
+                            <p class="mb-5">Iscriviti alla nostra newsletter per restare aggiornato sulle nuove uscite settimanali.</p>
+                            <form action="" method="GET" class="tm-subscribe-form">
+                                <input type="text" name="email" placeholder="Your Email..." required>
+                                <button type="submit" class="btn rounded-0 btn-primary tm-btn-small">Iscriviti</button>
+                            </form>
+                      </div>
+                 </div>
                 <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12 mb-4">
                     <div class="p-5 tm-bg-gray">
                         <h3 class="tm-text-primary mb-4">Quick Links</h3>

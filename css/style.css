@@ -31,6 +31,7 @@ a:hover {
 h1 {
     color: #3F6DC3 !important;
 }
+
 h2, p { color: white; }
 
 .tm-site-header {
@@ -69,7 +70,7 @@ h2, p { color: white; }
 }
 
 .tm-bg-gray { background-color: #141B38; }
-.tm-text-primary { color: #3399CC; }
+.tm-text-primary { color: #3F6DC3; }
 .tm-text-secondary { color: #3CAFAF; }
 
 .tm-nav-link {
@@ -208,8 +209,16 @@ h2, p { color: white; }
     padding-top: 80px;
     padding-bottom: 35px;
 }
+.singletrend-content-container {
+    max-width: 1422px;
+    padding-top: 50px;
+    padding-bottom: 35px;
+}
 
-.tm-page-title { font-size: 2.5rem; }
+.tm-page-title { 
+    font-size: 2.5rem; 
+    margin-top: 20px;
+}
 .tm-catalog-item-list { justify-content: space-between; }
 
 .tm-catalog-item {
@@ -267,15 +276,15 @@ h2, p { color: white; }
 .tm-category-item { margin: 16px; }
 
 .tm-category-link {
-    color: #3399CC;
+    color: #3F6DC3;
     padding: 10px;
     border-bottom: 3px solid transparent;
 }
 
 .tm-category-link.active,
 .tm-category-link:hover {
-    border-bottom: 3px solid #3399CC;
-    color: #3399CC;
+    border-bottom: 3px solid #3F6DC3;
+    color: #3F6DC3;
 }
 
 .tm-paging-link {
@@ -315,6 +324,7 @@ h2, p { color: white; }
 .tm-share-box { 
     font-size: 1.4rem; 
     padding: 3rem;
+    text-align: center;
 }
 .tm-share-box-title { font-size: 1.4rem; }
 
@@ -333,8 +343,9 @@ h2, p { color: white; }
     margin-right: 24px;
 }
 
+
 .tm-share-button:last-child { margin-right: 0; }
-.tm-text-link { color: #3399CC; }
+.tm-text-link { color: #3F6DC3; }
 
 .tm-likes-box,
 .tm-btn-download {
@@ -355,7 +366,7 @@ h2, p { color: white; }
 }
 
 #tm-fixed-header-bg { height: 450px; }
-.tm-fixed-header-1 { background-image: url(../img/video-detail-1.jpg); }
+.tm-fixed-header-1 { background-image: url(../img/singletrendbackground.jpg); }
 .tm-fixed-header-2 { background-image: url(../img/about-1.jpg); }
 .tm-fixed-header-3 { background-image: url(../img/contact-1.jpg); }
 
@@ -679,6 +690,9 @@ video {
   letter-spacing: 0rem;
 }
 
+.featurette-image {
+    margin-left: 50px !important;
+}
 
 /* RESPONSIVE CSS*/
 
@@ -694,4 +708,16 @@ video {
   .featurette-heading {
     margin-top: 0rem;
   }
+}
+
+#imgviralnow {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    margin-left: 5px;
+}
+
+#youtubevideo {
+    text-align: center;
+    padding-bottom: 40px;
 }

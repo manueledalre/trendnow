@@ -288,7 +288,7 @@ h2, p { color: white; }
 }
 
 .tm-paging-link {
-    background-color: #F4F4F4;
+    background-color: #586185;
     margin-right: 12px;
     font-size: 1.5rem;
     width: 60px;
@@ -296,12 +296,13 @@ h2, p { color: white; }
     display: flex;
     align-items: center;
     justify-content: center;
+    color: white;
 }
 
 .nav-item.active > .tm-paging-link,
 .nav-item:hover > .tm-paging-link {
-    background-color: #CCC;
-    color: #666666;
+    background-color: #404761;
+    color: white;
 }
 
 .tm-subscribe-form { 
@@ -326,7 +327,7 @@ h2, p { color: white; }
     padding: 3rem;
     text-align: center;
 }
-.tm-share-box-title { font-size: 1.4rem; }
+.tm-share-box-title { font-size: 1.4rem; color: white;}
 
 .tm-bg-white {
     background-color: white;
@@ -343,13 +344,25 @@ h2, p { color: white; }
     margin-right: 24px;
 }
 
+/* BOTTONE SOCIAL NEL FOOTER*/
+.tm-share-buttonfooter {
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 24px;
+    color: #141b38;
+}
+.tm-share-buttonfooter:hover {color: #3f6dc3 }
+
+/* FINEBOTTONE SOCIAL NEL FOOTER*/
 
 .tm-share-button:last-child { margin-right: 0; }
 .tm-text-link { color: #3F6DC3; }
 
 .tm-likes-box,
 .tm-btn-download {
-    width: 280px;
+    /*width: 280px; */
     height: 60px;
 }
 
@@ -367,7 +380,7 @@ h2, p { color: white; }
 
 #tm-fixed-header-bg { height: 450px; }
 .tm-fixed-header-1 { background-image: url(../img/singletrendbackground.jpg); }
-.tm-fixed-header-2 { background-image: url(../img/about-1.jpg); }
+.tm-fixed-header-2 { background-image: url(../img/about.png); }
 .tm-fixed-header-3 { background-image: url(../img/contact-1.jpg); }
 
 video {
@@ -385,6 +398,13 @@ video {
 .tm-liked .tm-not-liked-icon { display: none; }
 .tm-welcome-text-2 { max-width: 575px; }
 .tm-share-button:hover { background-color: #e9ecef; }
+
+/* BOTTONI SOCIAL CENTRATI */
+.d-sharecentrato {
+    display:-ms-flexbox!important;
+    display:flex!important;
+    justify-content: center;
+}
 
 /*About*/
 .tm-about-text-container { max-width: 920px; }
@@ -717,7 +737,96 @@ video {
     margin-left: 5px;
 }
 
-#youtubevideo {
+/* PADDING E RESPONSIVE VIDEO YOUTUBE */
+#youtubepadding {
+    padding-top: 50px;
+    padding-bottom: 90px;
+}
+
+.youtubevideo {
+    height: 0;
+    overflow: hidden;
     text-align: center;
-    padding-bottom: 40px;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    position: relative;
+}
+.youtubevideo iframe,
+.youtubevideo object,
+.youtubevideo embed {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+/* DA USARE PER I LINK NELLE DESCRIZIONI */
+.linkdesc {color: #33a1ac;}
+
+
+
+
+/* ESPERIMENTI */
+/* DISCOVERY SETTIMANALE */
+.dynamic-text-shadow {
+  /*  larger font size, more shadow distance  */
+  text-shadow: .07em .07em 0 hsl(200 50% 30%);
+}
+
+#dy-white {
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1.1;
+  color: #eeeeee;
+}
+/* VIRAL NOW */
+.dynamic-text-shadow-blue {
+  /*  larger font size, more shadow distance  */
+text-shadow: 3px 4px 7px rgba(81,67,21,1);
+}
+
+#dy-blue {
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1.1;
+}
+/* AS IT WAS */
+#dynamic-text-canzone {
+   text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
+    0px -4px 10px rgba(255,255,255,0.3)}
+
+
+article {
+  background: linear-gradient(
+    to right, 
+    hsl(98 100% 62%), 
+    hsl(204 100% 59%)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* STILE FOOTER*/
+.stilefooter {
+    color: #272852;
+    text-align: center;
+}
+.linkfooter {color: #272852;}
+
+
+/*------------------------PAGINA ABOUT---------------------*/
+#sfondoabout {
+    padding: 150px 0px;
+    background-image: url(../img/about.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#sfondoabout2 {
+    padding: 150px 0px;
+    background-image: url(../img/about2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
